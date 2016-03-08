@@ -1,0 +1,146 @@
+body {
+    background: #fff;
+    margin:0;
+}
+
+.clear{
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    display: block;
+}
+
+a {text-decoration: none;}
+
+#tab-container {
+    font-family: Arial,  Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height:14px;
+    margin: 3em auto;
+    width: 90%;
+    /*width: 500px;*/
+    overflow: hidden;
+}
+
+#tab-container ul{
+    list-style: none;
+    list-style-position: outside;
+    margin-left: 0;
+    width: 100%;
+}
+
+#tab-container ul.tab-menu li{
+    display: block;
+    float: left;
+    position: relative;
+    font-weight: 700;
+    padding: 5px 10px 5px 10px;
+    background: #eee;
+    border: 1px solid #ddc;
+    border-bottom: none;
+    border-width: 1px;
+    color: #999;
+    cursor: default;
+    height: 14px;
+    margin-bottom: -1px;
+    margin-right: 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#tab-container ul.tab-menu li.active{
+    background: #fff;
+    color: #0088CC;
+    height: 15px;
+    border-bottom: 0;
+}
+
+.tab-top-border {
+    border-bottom: 1px solid #d0ccc9;
+}
+
+.tab-content{
+    margin: 0 auto;
+    background: #efefef;
+    background: #fff;
+    border: 1px solid #ddc;
+    border-top-style: none;
+    text-align: left;
+    padding: 10px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    display: none;
+    height: auto;
+    /*height: 250px;*/
+}
+
+#tab-container div.active{
+    display: block;
+}
+
+.tab-content h1{
+    line-height: 1em;
+    height: 15px;
+    /*height: 28px;*/
+    font-size: 16px;
+}
+
+/* RESPONSIVE GRID */
+ul.grid {
+    list-style: none;
+    font-size: 0px;
+    margin-left: -2.5%; /* should match li left margin */
+}
+ul.grid li {
+    display: inline-block;
+    /*padding: 10px;*/
+    margin: 0 2.5% 2.5% 0;
+    /*margin: 0 0 2.5% 2.5%;*/
+    /*background: #fff;*/
+    /*border: 1px solid #ddd;*/
+    font-size: 12px;
+/*    font-size: 16px;
+    font-size: 1rem;*/
+    vertical-align: top;
+/*    box-shadow: 0 0 5px #ddd;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;*/
+}
+ul.grid li select {
+    /*display: block;*/
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 10px;
+}
+ul.grid li label {
+    margin: 0 0 5px;
+}
+
+/* class for 2 columns */
+ul.grid.columns-2 li {
+    width: 47.5%; /* this value + 2.5 should = 50% */
+}
+/* class for 3 columns */
+ul.grid.columns-3 li {
+    width: 30.83%; /* this value + 2.5 should = 33% */
+}
+/* class for 4 columns */
+ul.grid.columns-4 li {
+    width: 22.5%; /* this value + 2.5 should = 25% */
+}
+/* class for 5 columns */
+ul.grid.columns-5 li {
+    width: 17.5%; /* this value + 2.5 should = 20% */
+}
+
+
+@media (max-width: 480px) {
+    ul.grid {
+        margin-left: 0;
+    }
+    ul.grid li {
+        width: 100% !important; /* over-ride all li styles */
+        margin: 0 0 20px;
+    }
+}
